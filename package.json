@@ -1,0 +1,27 @@
+{
+  "name": "agora-node-server-app",
+  "version": "1.0.0",
+  "description": "Node.js Server for Agora",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jslaybaugh789/agora-node-server-app.git"
+  },
+  "keywords": [
+    "Node",
+    "Server",
+    "CS4550"
+  ],
+  "author": "Jude Slaybaugh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jslaybaugh789/agora-node-server-app/issues"
+  },
+  "homepage": "https://github.com/jslaybaugh789/agora-node-server-app#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
