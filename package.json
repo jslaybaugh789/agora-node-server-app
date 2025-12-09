@@ -1,10 +1,12 @@
 {
+  "type": "module",
   "name": "agora-node-server-app",
   "version": "1.0.0",
   "description": "Node.js Server for Agora",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,11 @@
   },
   "homepage": "https://github.com/jslaybaugh789/agora-node-server-app#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "mongoose": "^9.0.1",
+    "uuid": "^13.0.0"
   }
 }
