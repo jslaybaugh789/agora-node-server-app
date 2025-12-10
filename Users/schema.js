@@ -13,7 +13,6 @@ const userSchema = new mongoose.Schema({
       enum: ["BUYER", "SELLER"],
       default: "BUYER",
     },
-    //loginId: String,
   },
   { collection: "users" }
 );
