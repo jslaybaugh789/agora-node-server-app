@@ -14,6 +14,10 @@ export default function ProductRoutes(app) {
     const products = await dao.findAllProducts();
     res.json(products);
   };
+  const findProductsByName = async (req, res) => {
+    const products = await dao.findProductsByName(req.params.productName);
+    res.json(products);
+  }
   const findProductById = async (req, res) => {
     const product = await dao.findProductById(req.params.productId);
     res.json(product);
@@ -32,6 +36,7 @@ export default function ProductRoutes(app) {
 
   app.post("/api/products", createProduct);
   app.get("/api/products", findAllProducts);
+  app.get("/api/products/name/:productName", findProductsByName);
   app.get("/api/products/:productId", findProductById);
   app.get("/api/products/shop/:shopId", findProductsByShopId);
   app.put("/api/products/:productId", updateProduct);

@@ -7,7 +7,9 @@ import session from "express-session";
 import WishlistsRoutes from "./Wishlists/routes.js";
 import ShopRoutes from "./Shops/routes.js";
 import ProductRoutes from "./Products/routes.js";
+import YoutubeRoutes from "./Search/routes.js";
 const CONNECTION_STRING = process.env.DATABASE_CONNECTION_STRING || "mongodb://127.0.0.1:27017/agora";
+const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY || "AIzaSyDYB_M005ZqqTpXVHfIXoa8LFnYvlV3gmg";
 mongoose.connect(CONNECTION_STRING);
 const app = express()
 app.use(cors({
@@ -33,4 +35,5 @@ UserRoutes(app);
 WishlistsRoutes(app);
 ShopRoutes(app);
 ProductRoutes(app);
+YoutubeRoutes(app, YOUTUBE_API_KEY);
 app.listen(process.env.PORT || 4000);

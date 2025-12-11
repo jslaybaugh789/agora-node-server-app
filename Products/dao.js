@@ -6,9 +6,10 @@ export default function ProductsDao() {
     return model.create(newProduct);
   }
   const findAllProducts = () => model.find();
+  const findProductsByName = (productName) => model.find({name: productName});
   const findProductById = (productId) => model.findById(productId);
   const findProductsByShopId = (shopId) =>  model.find({ shopId: shopId });
   const updateProduct = (productId, product) =>  model.updateOne({ _id: productId }, { $set: product });
   const deleteProduct = (productId) => model.findByIdAndDelete( productId );
-  return { createProduct, findAllProducts, findProductById, findProductsByShopId, updateProduct, deleteProduct };
+  return { createProduct, findProductsByName, findAllProducts, findProductById, findProductsByShopId, updateProduct, deleteProduct };
 }
